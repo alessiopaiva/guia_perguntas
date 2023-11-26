@@ -65,8 +65,8 @@ app.get("/pergunta/:id",(req ,res) => {
                 res.render("pergunta",{
                     pergunta: pergunta,
                     respostas: respostas
-                });
-            });
+                })
+            })
 
         }else{
             res.redirect("/")
@@ -82,7 +82,7 @@ app.post("/responder",(req, res) => {
         perguntaId: perguntaId
     }).then(() => {
         res.redirect("/pergunta/"+perguntaId)
-    });
+    })
 })
 
 app.listen(8080,()=>{console.log("app rodando")})

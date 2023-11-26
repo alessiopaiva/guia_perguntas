@@ -1,5 +1,5 @@
-const Sequelize = require("sequelize");
-const connection = require("./database");
+const Sequelize = require("sequelize")
+const connection = require("./database")
 
 const Resposta = connection.define("respostas", {
     corpo: {
@@ -10,8 +10,8 @@ const Resposta = connection.define("respostas", {
         type: Sequelize.INTEGER,
         allowNull: false
     }
-});
+})
 
 Resposta.sync({force: false});
 
-module.exports = Resposta;
+module.exports = Resposta
